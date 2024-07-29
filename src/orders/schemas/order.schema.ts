@@ -6,8 +6,8 @@ export type OrderDocument = Order & Document;
 
 @Schema()
 export class Order {
-  @Prop({ required: true })
-  orderNumber: number;
+  @Prop()
+  orderNumber?: string;
 
   @Prop({ type: [{ type: Object }] })
   products: Product[];
